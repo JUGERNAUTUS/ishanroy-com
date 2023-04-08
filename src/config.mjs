@@ -1,16 +1,16 @@
-import defaultImage from './assets/images/default.png';
+// import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Ishan Roy Personal Site',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://ishanroy.com',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'Ishan Roy',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
-  defaultImage: defaultImage,
+    '🚀Personal Site for Ishan Roy, building for Web3',
+  // defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
