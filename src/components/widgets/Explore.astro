@@ -1,0 +1,190 @@
+---
+// import { Icon } from 'astro-icon';
+
+interface Item {
+  title: string;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  items: Array<Array<Item>>;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+} = Astro.props;
+---
+
+<section class="scroll-mt-16 " id="explore">
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8">
+    
+        <div class="mb-10 md:mx-auto text-center md:mb-12 " >
+          {title && (
+            <h2
+              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+              set:html={title}
+            />
+          )}
+          
+          <div class="container my-12 mx-auto px-4 md:px-12" >
+            <div class="flex flex-wrap -mx-1 lg:-mx-4" >
+        
+                <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" >
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="relative block h-auto w-full -z-40" src="https://picsum.photos/400/400/?random">
+                        </a>
+                        
+                        <div class="block glass-panel -mt-20 z-40">
+                        <header class="justify-between leading-tight p-2 md:p-4 tile-yellow" >
+                            <p class="flex-auto text-lg text-right">
+                               Consultancy                      
+                            </p>
+                        </header>
+        
+                      </div>
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <!-- END Column -->
+
+
+                                <!-- Column -->
+                                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" >
+        
+                                  <!-- Article -->
+                                  <article class="overflow-hidden rounded-lg shadow-lg">
+                      
+                                      <a href="#">
+                                          <img alt="Placeholder" class="relative block h-auto w-full -z-40" src="https://picsum.photos/400/400/?random">
+                                      </a>
+                                      
+                                      <div class="block glass-panel -mt-20 z-40">
+                                      <header class="justify-between leading-tight p-2 md:p-4 tile-yellow" >
+                                          <p class="flex-auto text-lg text-right">
+                                             Consultancy                      
+                                          </p>
+                                      </header>
+                      
+                                    </div>
+                                  </article>
+                                  <!-- END Article -->
+                      
+                              </div>
+                              <!-- END Column -->
+
+
+                                              <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" >
+        
+                  <!-- Article -->
+                  <article class="overflow-hidden rounded-lg shadow-lg">
+      
+                      <a href="#">
+                          <img alt="Placeholder" class="relative block h-auto w-full -z-40" src="https://picsum.photos/400/400/?random">
+                      </a>
+                      
+                      <div class="block glass-panel -mt-20 z-40">
+                      <header class="justify-between leading-tight p-2 md:p-4 tile-yellow" >
+                          <p class="flex-auto text-lg text-right">
+                             Consultancy                      
+                          </p>
+                      </header>
+      
+                    </div>
+                  </article>
+                  <!-- END Article -->
+      
+              </div>
+              <!-- END Column -->
+
+
+
+                              <!-- Column -->
+                              <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" >
+        
+                                <!-- Article -->
+                                <article class="overflow-hidden rounded-lg shadow-lg">
+                    
+                                    <a href="#">
+                                        <img alt="Placeholder" class="relative block h-auto w-full -z-40" src="https://picsum.photos/400/400/?random">
+                                    </a>
+                                    
+                                    <div class="block glass-panel -mt-20 z-40">
+                                    <header class="justify-between leading-tight p-2 md:p-4 tile-yellow" >
+                                        <p class="flex-auto text-lg text-right">
+                                           Consultancy                      
+                                        </p>
+                                    </header>
+                    
+                                  </div>
+                                </article>
+                                <!-- END Article -->
+                    
+                            </div>
+                            <!-- END Column -->
+
+
+                                            <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" >
+        
+                  <!-- Article -->
+                  <article class="overflow-hidden rounded-lg shadow-lg">
+      
+                      <a href="#">
+                          <img alt="Placeholder" class="relative block h-auto w-full -z-40" src="https://picsum.photos/400/400/?random">
+                      </a>
+                      
+                      <div class="block glass-panel -mt-20 z-40">
+                      <header class="justify-between leading-tight p-2 md:p-4 tile-yellow" >
+                          <p class="flex-auto text-lg text-right">
+                             Consultancy                      
+                          </p>
+                      </header>
+      
+                    </div>
+                  </article>
+                  <!-- END Article -->
+      
+              </div>
+              <!-- END Column -->
+
+
+                              <!-- Column -->
+                              <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" >
+        
+                                <!-- Article -->
+                                <article class="overflow-hidden rounded-lg shadow-lg">
+                    
+                                    <a href="#">
+                                        <img alt="Placeholder" class="relative block h-auto w-full -z-40" src="https://picsum.photos/400/400/?random">
+                                    </a>
+                                    
+                                    <div class="block glass-panel -mt-20 z-40">
+                                    <header class="justify-between leading-tight p-2 md:p-4 tile-yellow" >
+                                        <p class="flex-auto text-lg text-right">
+                                           Consultancy                      
+                                        </p>
+                                    </header>
+                    
+                                  </div>
+                                </article>
+                                <!-- END Article -->
+                    
+                            </div>
+                            <!-- END Column -->
+
+
+        
+                
+            </div>
+        </div>
+    </div>
+  </div>
+</section>

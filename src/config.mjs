@@ -1,7 +1,7 @@
 // import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'Ishan Roy Personal Site',
+  name: 'Ishan Roy - Blockchain and Web3 Consultant and Developer',
 
   origin: 'https://ishanroy.com',
   basePathname: '/',
@@ -9,10 +9,10 @@ const CONFIG = {
 
   title: 'Ishan Roy',
   description:
-    '🚀Personal Site for Ishan Roy, building for Web3',
+    'Blockchain and Web3 Consultant and Developer',
   // defaultImage: defaultImage,
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'dark', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',
   textDirection: 'ltr',

@@ -2,56 +2,58 @@
 interface Item {
   name: string;
   value: string;
+  description1: string;
+  description2: string;
 }
 
 export interface Props {
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
+
   items?: Array<Item>;
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  highlight,
+
   items = [],
 } = Astro.props;
 ---
 
-<div class="px-4 py-4 md:py-16 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
-  {
-    (title || subtitle || highlight) && (
-      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        {highlight && (
-          <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase">
-            {highlight}
-          </p>
-        )}
-        {title && (
-          <h2
-            class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading"
-            set:html={title}
-          />
-        )}
-        {subtitle && (
-          <p class="max-w-3xl mx-auto text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
-        )}
-      </div>
-    )
-  }
-  <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
+<section class="relative  bg-cover bg-[url('../../assets/images/exp.png')]" >
+    <div class="absolute pointer-events-none "  aria-hidden="true"></div>
+    <div class="relative  block  p-20" ></div>
+    <div class="relative mx-20  glass-panel block p-6 pseudo-partial-border" >
+
+
+  
+  <div class="mx-auto justify-center grid grid-cols-3 row-gap-4  md:grid-cols-3 mt-20" >
     {
-      items.map(({ name, value }) => (
-        <div class="text-center md:border-r md:last:border-none dark:md:border-slate-500 mb-12 md:mb-0">
-          <div class="text-[2.6rem] font-bold lg:text-5xl xl:text-6xl text-primary dark:text-blue-600 font-heading">
+      items.map(({ name, value, description1, description2 }) => (
+        <div class="text-center justify-center md:border-r md:last:border-none dark:md:border-slate-500 mb-12 md:mb-0 ">
+          <div class="text-lg font-bold lg:text-5xl xl:text-6xl text-primary dark:text-white font-heading">
             {value}
           </div>
-          <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
+          <div class="text-lg  tracking-widest lg:text-2xl xl:text-2xl text-primary text-gray-800 dark:text-white ">
             {name}
-          </p>
+          </div>
+          <div class="text-lg  mt-20 text-primary text-gray-800 dark:text-white ">
+            {description1}
+          </div>
+          <div class="text-lg  mt-10  text-primary text-gray-800 dark:text-white ">
+            {description2}
+          </div>
+
         </div>
       ))
-    }
+    }   
   </div>
+
+  <div class="relative mx-auto  block  p-6 " ></div>
+  
+  <div class="relative mx-auto mt-20 bg-slate-900 block max-w-lg p-6">
+  <h1 class= "text-center">
+    Patrons
+  </h1>
+  </div>
+  
 </div>
+<div class="relative mx-auto  block  p-20" ></div>
+</section>

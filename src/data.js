@@ -5,63 +5,37 @@ export const headerData = {
     {
       text: 'About',
       href: getPermalink('/about'),
-      // links: [
-      //   {
-      //     text: 'About1',
-      //     href: getPermalink('/landing/saas'),
-      //   },
-      //   {
-      //     text: 'Consultancy',
-      //     href: getPermalink('/landing/startup'),
-      //   },
-      //   {
-      //     text: 'Mobile App',
-      //     href: getPermalink('/landing/mobile-app'),
-      //   },
-      // ],
+      links: [
+              {
+                text: 'Media',
+                href: '#'
+              },
+              {
+                text: 'Recorded Webinars',
+                href: '#'
+              },        
+             ]
     },
     {
       text: 'Consultancy',
-      href:getPermalink('/consultancy')
-      // links: [
-      //   {
-      //     text: 'Features',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Pricing',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'About us',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Contact',
-      //     href: '#',
-      //   },
-      //   {
-      //     text: 'Terms',
-      //     href: getPermalink('/terms'),
-      //   },
-      //   {
-      //     text: 'Privacy policy',
-      //     href: getPermalink('/privacy'),
-      //   },
-      // ],
+      href:getPermalink('/consultancy'),
     },
     {
       text: 'Whitelabel',
       href: getPermalink('/whitelabel'),
     },
     {
+      text: 'Academic',
+      href: getPermalink('/academic'),
+    },
+    {
       text: 'Blog',
-      href: getBlogPermalink(),
+      href: getBlogPermalink('/blog'),
     },
   ],
-  // actions: [
-  //   { type: 'button', text: 'Downloads', href: 'https://github.com/onwidget/astrowind' }
-  // ],
+  actions: [
+    { type: 'button', text: 'Contact', href: '/' }
+  ],
 };
   
 export const footerData = {

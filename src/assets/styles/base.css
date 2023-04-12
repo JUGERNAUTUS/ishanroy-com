@@ -1,14 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
+
+  .menu-bar {
+    @apply py-3 px-0 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between;
+    background-color: #FBB000;
+  }
+
   .text-page {
-    color: var(--aw-color-text-page);
+    color: var(--aw-color-text-page); font-family: 'Inter', sans-serif;
+
   }
 
   .text-muted {
-    color: var(--aw-color-text-muted);
+    color: var(--aw-color-text-muted); font-family: 'Inter', sans-serif;
+
   }
 
   .bg-light {
@@ -16,7 +28,7 @@
   }
 
   .bg-dark {
-    @apply bg-slate-900;
+    @apply bg-neutral-700;
   }
 
   
@@ -30,6 +42,15 @@
 
   .btn-primary {
     @apply font-semibold bg-primary text-white border-primary hover:bg-blue-900 hover:border-blue-900 hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-blue-900 dark:hover:bg-blue-900;
+  }
+
+  .btn-yellow {
+    @apply font-semibold bg-primary text-black border-primary hover:bg-blue-900 hover:border-blue-900 hover:text-white dark:text-black  dark:hover:border-gray-400 dark:hover:bg-gray-400;
+    background-color: #FBB000;
+  }
+
+  .tile-yellow {
+    border-bottom: 5px solid #FBB000
   }
 }
 
@@ -59,3 +80,39 @@
 [data-aw-toggle-menu].expanded g > path:last-child {
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
+
+.glass-panel {
+background: rgba(49, 48, 48, 0.7);
+/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+border-radius: 0px;
+/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+
+.pseudo-partial-border {
+  position: relative;
+  border: none;
+  text-align: center;
+}
+
+.pseudo-partial-border::before,
+.pseudo-partial-border::after {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  content: "";
+}
+
+.pseudo-partial-border::before {
+  left: 0;
+  top: 0;
+  border-left: 10px solid #FBB000;
+  border-top: 10px solid #FBB000;
+ }
+
+ .pseudo-partial-border::after {
+  right: 0;
+  bottom: 0;
+  border-right: 10px solid #FBB000;
+  border-bottom: 10px solid #FBB000;
+ }

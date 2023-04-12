@@ -43,11 +43,11 @@ const {
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky },
-    'top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100',
+    'top-0 z-40 flex-none mx-0 w-full transition-all ease-in duration-100',
   ]}
   id="header"
 >
-  <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-7xl  dark:bg-yellow-400 ">
+  <div class="menu-bar">
     <div class:list={[{"mr-auto": position === "right"}, "flex justify-between"]}>
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
@@ -67,14 +67,15 @@ const {
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
                 <>
-                  <button class="font-medium hover:text-gray-900 dark:hover:text-slate-900 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  <button class="font-bold hover:text-gray-900 dark:hover:text-slate-900 px-4 py-3 flex items-center transition duration-150 ease-in-out">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a
-                          class="first:rounded-t last:rounded-b md:hover:bg-gray-200 dark:hover:bg-slate-900 py-2 px-5 block whitespace-no-wrap"
+                          class="first:rounded-t last:rounded-b md:hover:bg-gray-200 dark:text-white  dark:hover:text-white dark:hover:bg-slate-800 py-2 px-5 block whitespace-no-wrap"
+                          
                           href={href2}
                         >
                           {text2}
@@ -85,7 +86,7 @@ const {
                 </>
               ) : (
                 <a
-                  class="font-medium hover:text-gray-900 dark:hover:text-slate-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  class="font-bold hover:text-gray-900 dark:hover:text-slate-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   href={href}
                 >
                   {text}
@@ -117,7 +118,7 @@ const {
               {actions.map(({ text, href, type }) => (
                 <a
                   class:list={[
-                    'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm',
+                    'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none dark:text-slate-900',
                     { 'btn-ghost': type === 'ghost', 'btn-primary': type === 'primary' },
                   ]}
                   href={href}
